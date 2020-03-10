@@ -41,6 +41,10 @@
 #include "libavutil/pixdesc.h"
 #include "libavutil/pixfmt.h"
 
+
+ #include "LEYFFmpegConverOC.h"
+
+
 #define DEFAULT_PASS_LOGFILENAME_PREFIX "ffmpeg2pass"
 
 #define MATCH_PER_STREAM_OPT(name, type, outvar, fmtctx, st)\
@@ -1124,6 +1128,9 @@ static int open_input_file(OptionsContext *o, const char *filename)
         /* If not enough info to get the stream parameters, we decode the
            first frames to get it. (used in mpeg case for example) */
         ret = avformat_find_stream_info(ic, opts);
+        
+        //获取文件总时长信息
+        setDuration(ic->duration);
 
         for (i = 0; i < orig_nb_streams; i++)
             av_dict_free(&opts[i]);

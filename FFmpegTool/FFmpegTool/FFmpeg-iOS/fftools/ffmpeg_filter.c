@@ -26,7 +26,7 @@
 #include "libavfilter/buffersink.h"
 #include "libavfilter/buffersrc.h"
 
-#include "libavresample/avresample.h"
+//#include "libavresample/avresample.h"
 
 #include "libavutil/avassert.h"
 #include "libavutil/avstring.h"
@@ -38,6 +38,11 @@
 #include "libavutil/pixfmt.h"
 #include "libavutil/imgutils.h"
 #include "libavutil/samplefmt.h"
+
+
+#define SWS_BILINEAR          2
+#define SWS_BITEXACT          0x80000
+
 
 static const enum AVPixelFormat *get_compliance_unofficial_pix_fmts(enum AVCodecID codec_id, const enum AVPixelFormat default_formats[])
 {
