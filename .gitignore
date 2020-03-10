@@ -1,0 +1,7 @@
+FFmpegTool/FFmpegTool/FFmpeg-iOS/lib/libavcodec.a
+FFmpegTool/FFmpegTool/FFmpeg-iOS/lib/libavdevice.a
+FFmpegTool/FFmpegTool/FFmpeg-iOS/lib/libavfilter.a
+FFmpegTool/FFmpegTool/FFmpeg-iOS/lib/libavformat.a
+FFmpegTool/FFmpegTool/FFmpeg-iOS/lib/libavutil.a
+FFmpegTool/FFmpegTool/FFmpeg-iOS/lib/libswresample.a
+FFmpegTool/FFmpegTool/FFmpeg-iOS/lib/libswscale.a
